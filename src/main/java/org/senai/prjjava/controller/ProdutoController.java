@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
-@RequestMapping(path = "api/produto")
+@RequestMapping(path = "/api/produto")
 @CrossOrigin("*")
 public class ProdutoController {
 
