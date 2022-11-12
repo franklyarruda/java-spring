@@ -34,12 +34,12 @@ public class ProdutoController {
     }
 
     @PostMapping("/")
-    public @ResponseBody Iterable<Produto> buscarUsuarios(){
+    public @ResponseBody Iterable<Produto> buscarProduto(){
         return pRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    public @ResponseBody Optional<Produto> buscarUsuario(@PathVariable Integer id){
+    public @ResponseBody Optional<Produto> buscarProduto(@PathVariable Integer id){
         return pRepository.findById(id);
     }
     
