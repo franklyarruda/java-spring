@@ -20,7 +20,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping(path = "/api/produto")
 @CrossOrigin("*")
+
 public class ProdutoController {
+
 
     @Autowired
     ProdutoRepository pRepository;
@@ -33,8 +35,8 @@ public class ProdutoController {
 
     }
 
-    @PostMapping("/")
-    public @ResponseBody Iterable<Produto> buscarProduto(){
+    @GetMapping("/")
+    public @ResponseBody Iterable<Produto> buscarProdutos(){
         return pRepository.findAll();
     }
 
@@ -44,9 +46,9 @@ public class ProdutoController {
     }
     
     @PutMapping("/")
-    public @ResponseBody Produto atualizar(@RequestBody Produto objU){
-        pRepository.save(objU);
-        return objU;
+    public @ResponseBody Produto atualizar(@RequestBody Produto objP){
+        pRepository.save(objP);
+        return objP;
     }
 
     @DeleteMapping("/{id}")
