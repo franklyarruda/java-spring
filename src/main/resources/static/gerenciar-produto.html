@@ -1,0 +1,56 @@
+<!DOCTYPE html><!-- indica que pode usar tags do HTML5 -->
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <div class="container">
+        <div id="bt-gerenciar" >
+            <a href="index.html">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAAB7CAMAAABjGQ9NAAAAY1BMVEX///8AAACmpqatra1VVVXg4ODu7u7S0tL7+/tZWVn19fWxsbEzMzPCwsLJycnMzMwUFBSKioomJiZgYGA+Pj6bm5scHBxqamp9fX0uLi7o6OiDg4O4uLiQkJBzc3MJCQlISEicsj0QAAADiUlEQVRoge2a65KiMBCFQQQjindBGZ3x/Z9yvXQ7SJ8QwODW1vb5NUUm/Zlw0p1Eg0ClUqlU/7smp+g0sbSlk1fFPsHJOQ9vys8JaD2FdRX+0IvjM+pxIVrTuWCHmS/06CVsVG9OJDoceUIfanEPH2ObsQg8Np9hx0cQef5i5KHY2QoEvvq96riB2CMQVgQfhv1lRYfhelA2cFlV2wHZ8aYRfU0z5VDs7MeBDsPVYhg2cNlUPoqGYAOXRUEkH669s81WRlteny/l48L4ZZcyl20etTOR/tslqUd2JkNtOYODGVmdQO7ryd7LSOtK8xqM0he7XjHDesUGjvPDToHLqG6ko/Txx2IYdrwTUTZUL5NxOKbNmjPj9WGDEY1psPHNUCv6HGlzpu/DbnAZe5/3gC7HdWV/yxAzajo/n5zpycwnOwErl11WVB4W7Di8o+nDBi7jXVmtacePwba8F3shK+aUBjipD3BFR6MUFLYebFAxv6gJvVi2gX1P1Z7d4DIcvumDdWInYLXStCa2aZ1Smpm8xwYua2EnixG7scFa2dKggAF/9UMLEKzNtmzgsoO9CcYHlU8eVoEaKiYKiT8kqKrfTjKqCeyyixMdhhe747gG2QSsxC4TCQWL00yDX7GyXHRgl8kbFJtONE3Scbm8HXmqIZeBYmrVnvqAJGQ1u/1/DUhzDfo21rGsIRmdMZc0fThb2LWjFwVODlMj0WDHNadTpS1LNokcV0rvHoXjwE0Gu6zVDliIcgJyXO2mDbnsMTmm3c5fak39XY4D8ak9KWRTSxVJC8eh3QatxLKry6rakV/APptPc8BlG3uvTuIRAMLdceiMmVpnq6PozaFzVQbR7BJ32XLrYHdsFsgFSJ+1bNhzdtC0tM3hPBDVg1afZefTXVy9xATn9SKxsf3nG+LR1Bx3LTkvU8vZtkvZcosKm3lF3TxYmVxa86Z/QsEqjMhhu/taKp+vnHJw3GZz1E0XepXP2pCTBanSrei9LNHd/Ls6UjnmmrXkpHo/x3BtAzXXi4j2+NaBz1cPa/Eh2kMyw+Lidctx+6Ai87t/HZp9rY1g6/Iptl3KVraylf132Jcyrqt0l10/7DHo5bw+V7ayla1sZStb2cpWtrKV3YPtvs3sxz61YJuB2NYLnqocv1PpyZ6BTgguvxV90QX0cZzH8pboIEizqEnol+SOHo6vn1UqlUr1L+sP4Ck1s2DOs3AAAAAASUVORK5CYII=" width="50"  height="50"><br>Retorno para loja</a> 
+
+    </div>
+
+
+    <title>Gerenciar Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <style>
+        tbody {
+            cursor: pointer;
+        }
+    </style>
+    <div class="container">
+        <h4>Gerenciar Produtos</h4>
+        <input type="hidden" id="id">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" class="form-control">
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" class="form-control">
+        <label for="valor">Valor:</label>
+        <input type="text" id="valor" class="form-control">
+        <label for="img">URL Imagem:</label>
+        <input type="text" id="img" class="form-control">
+        <br>
+        <input type="button" value="Gravar" onclick="gravar()" class="btn btn-primary">
+        <input type="button" value="Novo" onclick="limpar()" class="btn btn-light">
+        <input type="button" value="Apagar" onclick="apagar()" class="btn btn-danger">
+        <h4>Lista de Produtos</h4>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Nome:
+                    </th>
+                    <th>
+                        Valor:
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="lista">
+            </tbody>
+        </table>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
